@@ -1,4 +1,7 @@
-# React + Vite
+# Minaye-shop
+## React + vite Minaye_shop
+
+A modern MERN stack e-commerce store customized by @kabe123456789.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
