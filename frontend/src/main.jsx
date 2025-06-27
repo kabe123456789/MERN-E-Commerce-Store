@@ -8,13 +8,14 @@ import { createBrowserRouter } from "react-router-dom";
 
 import PrivateRoute from "./components/PrivateRoute";
 
-// Auth
+// Auth       user-orders
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 
 import AdminRoute from "./pages/Admin/AdminRoute";
 import Profile from "./pages/User/Profile";
 import UserList from "./pages/Admin/UserList";
+import UserOrder from "./pages/User/UserOrder.jsx";
 
 import CategoryList from "./pages/Admin/CategoryList";
 
@@ -25,6 +26,9 @@ import ProductUpdate from "./pages/Admin/ProductUpdate";
 import Home from "./pages/Home.jsx";
 import Favorites from "./pages/Products/Favorites.jsx";
 import ProductDetails from "./pages/Products/ProductDetails.jsx";
+import AboutPage from "./pages/Auth/AboutPage.jsx";
+import CoachingPage from "./pages/Auth/CoachingPage.jsx";
+import ContactPage from "./pages/Auth/ContactPage.jsx";
 
 import Cart from "./pages/Cart.jsx";
 import Shop from "./pages/Shop.jsx";
@@ -46,9 +50,13 @@ const router = createBrowserRouter(
       <Route path="/product/:id" element={<ProductDetails />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/shop" element={<Shop />} />
+      <Route path="/about" element={<AboutPage/>}/>
+      <Route path="/coaching" element={<CoachingPage/>}/>
+      <Route path="/contact" element={<ContactPage/>} />
 
       {/* Registered users */}
       <Route path="" element={<PrivateRoute />}>
+        <Route path="/user-orders" element={<UserOrder />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/placeorder" element={<PlaceOrder />} />

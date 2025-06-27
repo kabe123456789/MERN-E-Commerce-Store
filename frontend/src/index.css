@@ -5,6 +5,513 @@
 body {
   background: #0f0f10;
   color: #fff;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #fff; /* Dark Blue Grey */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #1A2940; /* Dark Blue from image */
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f0f0f0; /* Light text for navbar */
+}
+
+.navbar-brand {
+  font-size: 2.2em; /* Larger brand name */
+  font-weight: bold;
+  font-family: 'Georgia', serif; /* Serif font like image */
+  color: #EAE7DC; /* Off-white/Cream */
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: #EAE7DC; /* Off-white/Cream */
+  text-decoration: none;
+  font-size: 1.1em;
+  
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #D4AC0D; /* Gold for hover/active */
+  border-bottom: 2px solid #D4AC0D;
+}
+
+.nav-links .dropdown-arrow {
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+.get-started-btn {
+  background-color: #B08D57; /* Muted Gold/Brownish */
+  color: #1A2940; /* Dark text on gold */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #4F72A8; /* Lighter gold on hover */
+}
+
+/* Hero Section Styles */
+.hero {
+  background-image: url('../public/images/try1.png'); /* Ensure this path is correct */
+  background-size: cover;
+  background-position: center top; 
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #EAE7DC; /* Off-white/Cream text */
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-family: 'Georgia', serif; /* Serif font like image */
+  font-size: 4em; /* Large title */
+  margin-bottom: 20px;
+  color: #EAE7DC;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  max-width: 700px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons .btn {
+  padding: 15px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.hero-buttons .btn-shop {
+  background-color: #D4AC0D; /* Bright Gold */
+  color: #1A2940; /* Dark text */
+  border: 2px solid #D4AC0D;
+}
+
+.hero-buttons .btn-coaching {
+  background-color: #EAE7DC; /* Off-white/Cream */
+  color: #1A2940; /* Dark text */
+  border: 2px solid #EAE7DC;
+}
+
+.hero-buttons .btn:hover {
+  transform: translateY(-2px);
+}
+.hero-buttons .btn-shop:hover {
+    background-color: #b08d57;
+}
+.hero-buttons .btn-coaching:hover {
+    background-color: #d0ccc0;
+}
+
+
+/* Page Content Styles */
+.page-content {
+  padding: 40px 20px;
+  min-height: 60vh;
+}
+
+.page-content h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #B08D57;
+}
+
+.page-content p, .page-content ul {
+  line-height: 1.8;
+  font-size: 1.1em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.page-content ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+/* Product/Service Card Styles */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+  color: #1A2940;
+}
+
+.card p {
+  font-size: 1em;
+  color: #555;
+  flex-grow: 1;
+}
+
+.card .price {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #D4AC0D; /* Gold for price */
+  margin: 15px 0;
+}
+
+.card .add-to-cart-btn {
+  background-color: #1A2940; /* Dark Blue */
+  color: #EAE7DC; /* Light text */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.card .add-to-cart-btn:hover {
+  background-color: #2c3e50; /* Slightly Lighter Blue */
+}
+
+/* Cart Page Styles */
+.cart-items {
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-details h4 {
+  margin: 0 0 5px 0;
+  color: #1A2940;
+}
+
+.cart-item-details p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.cart-item-actions button {
+  background-color: #e74c3c; /* Red for remove */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.cart-item-actions button:hover {
+    background-color: #c0392b;
+}
+
+.cart-summary {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #1A2940;
+  text-align: right;
+}
+
+.cart-summary h3 {
+  color: #1A2940;
+}
+
+.cart-summary .checkout-btn {
+  background-color: #D4AC0D; /* Gold */
+  color: #1A2940;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.cart-summary .checkout-btn:hover {
+    background-color: #b08d57;
+}
+
+/* Footer Styles (Optional) */
+/* ... (keep all your existing styles above this) ... */
+
+/* Footer Styles - Updated */
+.footer {
+  background-color: #29374E; /* Dark Blue from image */
+  color: #EAE7DC; /* Off-white/Cream text */
+  padding: 40px 0 0; /* Add padding to top, bottom handled by footer-bottom */
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between;
+  gap: 30px; /* Space between sections */
+  padding-bottom: 30px; /* Space before the bottom bar */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px; /* Consistent padding with .container */
+  padding-right: 20px; /* Consistent padding with .container */
+}
+
+.footer-section {
+  flex: 1; /* Allow sections to grow */
+  min-width: 200px; /* Minimum width before wrapping */
+  margin-bottom: 20px;
+}
+
+.footer-section h4,
+.footer-section .footer-logo {
+  font-family: 'Georgia', serif; /* Serif font like image headings */
+  font-size: 1.5em; /* Slightly larger than body text */
+  margin-bottom: 15px;
+  color: #EAE7DC;
+}
+
+.footer-section .footer-logo {
+  font-size: 2em; /* Larger for the brand name */
+  font-weight: bold;
+}
+
+.footer-section p {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #d3d0c5; /* Slightly muted cream for paragraphs */
+  max-width: 280px; /* Limit width of about text */
+}
+
+/* Newsletter specific styles */
+.newsletter-input {
+  background-color: #F5F5DC; /* Creamy beige from image */
+  border: 1px solid #d3c0a0;
+  padding: 12px 15px;
+  border-radius: 8px;
+  width: calc(100% - 32px); /* Full width minus padding */
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #333;
+}
+.newsletter-input::placeholder {
+  color: #777;
+}
+
+.newsletter-button {
+  background-color: #B08D57; /* Muted Gold/Brownish from image */
+  color: #29374E; /* Dark blue text on button */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #c9a16b; /* Lighter gold on hover */
+}
+
+/* Quick Links specific styles */
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links li {
+  margin-bottom: 10px;
+}
+
+.quick-links a {
+  color: #d3d0c5; /* Slightly muted cream */
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.quick-links a:hover {
+  color: #EAE7DC; /* Brighter cream on hover */
+  text-decoration: underline;
+}
+
+/* Follow Us specific styles */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #EAE7DC;
+  text-decoration: none;
+  font-size: 1.5em; /* For text-based icons, adjust if using image/font icons */
+  /* If using actual icon fonts like Font Awesome, you'd style the <i> tag */
+  /* For demo with text: */
+  font-weight: bold;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #c9a16b; /* Gold on hover */
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  background-color: #202B3F; /* Slightly darker or same blue, from image it looks slightly different shade or separated by a line */
+  text-align: center;
+  padding: 15px 20px;
+  border-top: 1px solid #3a4a65; /* Subtle separator line */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #b0b0b0; /* Lighter grey for copyright */
+}
+
+
+/* Responsive adjustments for footer */
+@media (max-width: 992px) { /* Adjust breakpoint as needed */
+  .footer-content {
+    flex-direction: column;
+    align-items: center; /* Center sections when stacked */
+    text-align: center; /* Center text within sections */
+  }
+  .footer-section {
+    min-width: 100%; /* Full width when stacked */
+    margin-bottom: 30px;
+  }
+  .footer-section p {
+    max-width: 100%; /* Allow text to span full width */
+  }
+  .social-icons {
+    justify-content: center; /* Center social icons */
+  }
+}
+
+@media (max-width: 768px) {
+    /* You might have existing responsive styles. Ensure footer ones are fine or adjust. */
+    /* Specific example: If newsletter input/button feel too wide on mobile */
+    .newsletter-input, .newsletter-button {
+         max-width: 300px; /* Or whatever looks good */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav-links .get-started-btn {
+    width: auto;
+    align-self: center;
+    margin-top: 10px;
+  }
+  .hero h1 {
+    font-size: 2.8em;
+  }
+  .hero p {
+    font-size: 1.2em;
+  }
+  .hero-buttons .btn {
+    padding: 12px 25px;
+    font-size: 1em;
+    display: block;
+    margin: 10px auto;
+    width: 70%;
+  }
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cart-item-actions {
+    margin-top: 10px;
+  }
 }
 
 input,

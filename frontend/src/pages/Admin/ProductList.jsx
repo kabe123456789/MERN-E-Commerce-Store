@@ -39,6 +39,7 @@ const ProductList = () => {
       productData.append("countInStock", stock);
 
       const { data } = await createProduct(productData);
+  
 
       if (data.error) {
         toast.error("Product create failed. Try Again.");
@@ -48,7 +49,7 @@ const ProductList = () => {
       }
     } catch (error) {
       console.error(error);
-      toast.error("Product create failed. Try Again.");
+      toast.error("Product create failed. Try Again2.");
     }
   };
 
